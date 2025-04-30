@@ -47,7 +47,7 @@ public class OpenAiRequestService {
             ChatCompletionRequest request = ChatCompletionRequest.builder()
                     .model("gpt-3.5-turbo")
                     .messages(Arrays.asList(
-                            new ChatMessage(ChatMessageRole.SYSTEM.value(), "You are a helpful assistant that answers questions based on the provided context."),
+                            new ChatMessage(ChatMessageRole.SYSTEM.value(), "You are a helpful assistant that answers questions based on the provided context. Be enthusiastic and empathetic. End your answers with a helpful question to continue the conversation."),
                             new ChatMessage(ChatMessageRole.USER.value(), "Context: " + context + "\n\nQuestion: " + question + "\n\nAnswer:")
                     ))
                     .maxTokens(500)
